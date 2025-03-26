@@ -3,9 +3,6 @@ import sklearn.model_selection as ms
 import sklearn.linear_model as lm
 import matplotlib.pyplot as plt
 import numpy as np
-from sklearn.preprocessing import LabelEncoder
-from mpl_toolkits.mplot3d import Axes3D
-import plotly.express as px
 
 def replace_outliers(column, threshold=30):
     processed_column = column.copy()
@@ -19,7 +16,7 @@ def replace_outliers(column, threshold=30):
     return processed_column
 
 # Load dataset
-dataset = pd.read_csv("C:/Users/TallesMarcelo/.spyder-py3/dataSet/dataMulti.csv")
+dataset = pd.read_csv("J:\PycharmProjects\Machine-Learning\dataSet\dataMulti.csv")
 dataset = dataset.dropna()
 X = dataset.iloc[:, :-2]
 y = dataset.iloc[:, -1].values
